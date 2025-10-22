@@ -2802,9 +2802,9 @@ section,
 
 /* intregrated section */
 .intregrated-box .container {
-  background: linear-gradient(rgba(3, 117, 188, 0.1), rgba(3, 117, 188, 0.1)),
-    url("../img/erp-dashboard.png") center center no-repeat;
-  background-size: contain;
+  background: linear-gradient(rgba(3, 117, 188, 0.2), rgba(3, 117, 188, 0.2)),
+    url("../img/erp-dashboard.png") top center no-repeat;
+  background-size: cover;
   padding: 100px 60px;
   border-radius: 15px;
   overflow: hidden;
