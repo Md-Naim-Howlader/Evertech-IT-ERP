@@ -10,7 +10,6 @@
   --nav-font: "Poppins", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #222c34; /* Default color used for the majority of the text content across the entire website */
@@ -840,6 +839,11 @@ section,
   color: var(--accent-color);
 }
 
+@media (max-width: 768px) {
+  .section-title {
+    padding-bottom: 30px;
+  }
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -1025,6 +1029,7 @@ section,
   transition: 0.3s;
   height: 100%;
   border: 0;
+  cursor: pointer;
 }
 
 .values .card img {
@@ -1034,7 +1039,7 @@ section,
   height: 72px;
   object-fit: contain;
   background: #f6faff !important;
-  transform: scale(1);
+
   border-radius: 5px;
 }
 
@@ -1047,10 +1052,15 @@ section,
 
 .values .card:hover {
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
 }
-
-.values .card:hover img {
-  transform: scale(1);
+.values .card a i {
+  position: relative;
+  transition: all 0.8s;
+}
+.values .card:hover a i {
+  position: absolute;
+  transform: translate(10px);
 }
 
 /*--------------------------------------------------------------
@@ -1083,41 +1093,6 @@ section,
   font-size: 16px;
 }
 
-/*--------------------------------------------------------------
-# Features Section
---------------------------------------------------------------*/
-.features .feature-box {
-  padding: 24px 20px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-  height: 100%;
-}
-
-.features .feature-box h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.features .feature-box i {
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  color: var(--accent-color);
-  line-height: 0;
-  padding: 4px;
-  margin-right: 10px;
-  font-size: 24px;
-  border-radius: 3px;
-  transition: 0.3s;
-}
-
-.features .feature-box:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-/*--------------------------------------------------------------
-# Alt Features Section
---------------------------------------------------------------*/
 .alt-features .icon-box {
   display: flex;
 }
@@ -1639,9 +1614,11 @@ section,
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
+  width: 60px;
+  height: 60px;
   border: 4px solid var(--background-color);
   margin: 0 auto;
+  border-radius: 50%;
 }
 
 .testimonials .testimonial-item h3 {
@@ -1719,10 +1696,14 @@ section,
 }
 
 .team .team-member .member-img {
+  height: 300px;
   position: relative;
   overflow: hidden;
 }
-
+.team .team-member .member-img img {
+  object-fit: contain;
+  height: 200px;
+}
 .team .team-member .member-img:after {
   position: absolute;
   content: "";
@@ -2946,4 +2927,60 @@ section,
   .intregrated-box .container {
     height: auto;
   }
+}
+
+/* Login Page style */
+.login-card {
+  max-width: 500px;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 30px;
+}
+.login-card ::placeholder {
+  font-size: 16px;
+}
+
+.login-card h3 {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.form-control {
+  border-radius: 8px;
+}
+
+.btn-login {
+  width: 100%;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  color: #fff;
+  background: var(--nav-hover-color);
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.login-footer a {
+  text-decoration: none;
+  color: #0d6efd;
+  font-weight: 500;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
 }
