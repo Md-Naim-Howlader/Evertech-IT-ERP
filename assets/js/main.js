@@ -13,7 +13,7 @@
       !selectHeader.classList.contains("fixed-top")
     )
       return;
-    window.scrollY > 100
+    window.scrollY > 30
       ? selectBody.classList.add("scrolled")
       : selectBody.classList.remove("scrolled");
   }
