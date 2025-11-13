@@ -42,7 +42,80 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 2000,
+          "autoplay": {
+            "delay": 0,
+            "disableOnInteraction": false
+          },
+          "slidesPerView": "auto",
+          "freeMode": true,
+          "freeModeMomentum": false,
+          "allowTouchMove": true,
+          "grabCursor": true,
+          "spaceBetween": 30,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": false
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 2,
+              "spaceBetween": 20
+            },
+            "480": {
+              "slidesPerView": 3,
+              "spaceBetween": 30
+            },
+            "768": {
+              "slidesPerView": 5,
+              "spaceBetween": 40
+            },
+            "992": {
+              "slidesPerView": 7,
+              "spaceBetween": 50
+            }
+          }
+        }
+      </script>
 
+      <div class="swiper-wrapper align-items-center">
+        <div class="swiper-slide">
+          <img src="assets/img/clients/img-1.png" class="img-fluid" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="assets/img/clients/FlingEx Logo (Stoke).png"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/clients/img-2.png" class="img-fluid" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/clients/img-3.png" class="img-fluid" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/clients/img-4.png" class="img-fluid" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/clients/img-7.png" class="img-fluid" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/clients/img-8.png" class="img-fluid" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/clients/img-7.png" class="img-fluid" alt="" />
+        </div>
+      </div>
+      <!-- <div class="swiper-pagination"></div> -->
+    </div>
+  </div>
   <body class="index-page">
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div
